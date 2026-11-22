@@ -179,7 +179,8 @@ sourceItem.appendChild(analysisStatus);
         resultBox.style.display = "block";
 
         verdictBadge.textContent = "Error";
-        summaryText.textContent = error.message;
+        summaryText.textContent =
+    "Unable to connect. Please check your internet connection and try again.";
         reasoningText.textContent = "";
         limitationsText.textContent = "";
         sourcesList.textContent = "";
