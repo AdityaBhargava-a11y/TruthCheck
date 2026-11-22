@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthCheck | AI Fact Verification</title>
+    <meta name="description" content="Verify news and claims using AI-powered evidence analysis.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-icon">✓</span>
+            TruthCheck
+        </a>
+
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </div>
+
+        <a href="#checker" class="nav-button">Verify a Claim ↗</a>
+    </nav>
+
+    <main>
+        <section class="hero">
+
+            <div class="hero-badge">
+                <span class="status-dot"></span>
+                AI-POWERED FACT VERIFICATION
+            </div>
+
+            <h1>
+                Don't believe everything.<br>
+                <span>Verify it.</span>
+            </h1>
+
+            <p class="hero-description">
+                In a world full of misinformation, know what's real.
+                Analyze claims, discover evidence and make informed decisions.
+            </p>
+
+            <div class="checker-box" id="checker">
+
+                <label for="claimInput">
+                    What would you like to verify?
+                </label>
+
+                <textarea
+                    id="claimInput"
+                    placeholder="Paste a news headline, article or claim here..."
+                    rows="4"
+                ></textarea>
+
+                <div class="checker-footer">
+                    <span>Enter a claim to get started</span>
+                    <button id="verifyButton">
+                        Verify Claim <span>→</span>
+                    </button>
+                </div>
+
+                <div id="resultBox" class="result-box" style="display: none;">
+
+                    <div class="result-header">
+                        <div>
+                            <span class="result-label">FACT CHECK REPORT</span>
+                            <h2>Verification Result</h2>
+                        </div>
+
+                        <span id="verdictBadge" class="verdict-badge">
+                            Analyzing
+                        </span>
+                    </div>
+                    <div class="confidence-row">
+    <span>Evidence Confidence</span>
+    <span id="confidenceBadge" class="confidence-badge">
+        Analyzing
+    </span>
+</div>
+
+                    <div class="result-content">
+
+                        <div class="result-section">
+                            <h3>Summary</h3>
+                            <p id="summaryText"></p>
+                        </div>
+
+                        <div class="result-section">
+                            <h3>Reasoning</h3>
+                            <p id="reasoningText"></p>
+                        </div>
+
+                        <div class="result-section">
+                            <h3>Limitations</h3>
+                            <p id="limitationsText"></p>
+                        </div>
+
+                    </div>
+
+                    <div class="sources-section">
+    <h3>Sources & Evidence</h3>
+    <p class="sources-description">
+        Websites used during this verification. Check each source independently.
+    </p>
+
+    <div id="sourcesList">
+        <p>Sources will appear here.</p>
+    </div>
+</div>
+                    <div class="result-disclaimer">
+                        AI-generated assessment. Always check the original evidence.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="trust-note">
+                <span>✦</span>
+                Evidence-based analysis. Transparent sources. AI-powered insights.
+            </div>
+
+        </section>
+
+        <section class="features" id="features">
+
+            <div class="section-heading">
+                <span>WHAT WE OFFER</span>
+                <h2>Verification made smarter.</h2>
+                <p>Everything you need to examine information critically.</p>
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <div class="feature-icon">⌕</div>
+                    <h3>AI Claim Analysis</h3>
+                    <p>
+                        Understand submitted claims and identify
+                        the facts that need verification.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">◎</div>
+                    <h3>Evidence Discovery</h3>
+                    <p>
+                        Find relevant information from available
+                        online sources and publications.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">◈</div>
+                    <h3>Detailed Reports</h3>
+                    <p>
+                        Get understandable assessments with
+                        supporting evidence and source references.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <span>ABOUT TRUTHCHECK</span>
+            <h2>Think critically.<br>Verify confidently.</h2>
+            <p>
+                TruthCheck is an AI-powered fact-checking project
+                designed to help users examine online claims using
+                evidence and transparent analysis.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="#" class="logo">
+            <span class="logo-icon">✓</span>
+            TruthCheck
+        </a>
+
+        <p>AI-powered information verification.</p>
+        <span>© 2026 TruthCheck. Student Project.</span>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
