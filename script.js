@@ -14,10 +14,15 @@ const SUPABASE_KEY = "sb_publishable_tM-MO0OBPP68K4A48Fu_Cw_1oLr8h7d";
 verifyButton.addEventListener("click", async () => {
     const claim = claimInput.value.trim();
 
-    if (claim.length < 15) {
-        alert("Please enter a more detailed claim.");
-        return;
-    }
+   if (claim.length < 15) {
+    alert("Please enter a more detailed claim.");
+    return;
+}
+
+if (claim.length > 5000) {
+    alert("Claim must not exceed 5,000 characters.");
+    return;
+}
 
     verifyButton.disabled = true;
     verifyButton.textContent = "Analyzing...";
