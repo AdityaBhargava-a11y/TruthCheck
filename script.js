@@ -209,7 +209,9 @@ sourceItem.appendChild(analysisStatus);
 
         verdictBadge.textContent = "Error";
         summaryText.textContent =
-    "Unable to connect. Please check your internet connection and try again.";
+    error.message || "An unexpected error occurred.";
+
+console.error("TruthCheck error:", error);
         reasoningText.textContent = "";
         limitationsText.textContent = "";
         sourcesList.textContent = "";
