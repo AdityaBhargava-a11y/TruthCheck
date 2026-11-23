@@ -7,6 +7,12 @@ const summaryText = document.getElementById("summaryText");
 const reasoningText = document.getElementById("reasoningText");
 const limitationsText = document.getElementById("limitationsText");
 const sourcesList = document.getElementById("sourcesList");
+document.querySelectorAll(".example-chip").forEach((button) => {
+    button.addEventListener("click", () => {
+        claimInput.value = button.dataset.example;
+        claimInput.focus();
+    });
+});
 
 const SUPABASE_URL = "https://xilayhxmlsmvpzipajvc.supabase.co";
 const SUPABASE_KEY = "sb_publishable_tM-MO0OBPP68K4A48Fu_Cw_1oLr8h7d";
