@@ -70,21 +70,29 @@ if (claim.length > 5000) {
                 : "Not provided.";
         }
 
-        const verdict = extractSection("VERDICT", "CONFIDENCE");
+        const verdictRaw = extractSection("VERDICT", "CONFIDENCE");
+
+const verdict = verdictRaw
+    .replace(/[*_#]/g, "")
+    .trim()
+    .split(/\r?\n/)[0]
+    .replace(/[.:]+$/, "")
+    .trim()
+    .toLowerCase();
         const summary = extractSection("SUMMARY", "REASONING");
         const reasoning = extractSection("REASONING", "LIMITATIONS");
         const limitations = extractSection("LIMITATIONS", "END");
 
         const verdictLabels = {
-    "Supported": "TRUE",
-    "Mostly supported": "MOSTLY TRUE",
-    "Misleading": "MISLEADING",
-    "Contradicted": "FALSE",
-    "Insufficient evidence": "UNVERIFIED"
+    "supported": "TRUE",
+    "mostly supported": "MOSTLY TRUE",
+    "misleading": "MISLEADING",
+    "contradicted": "FALSE",
+    "insufficient evidence": "UNVERIFIED"
 };
 
 verdictBadge.textContent =
-    verdictLabels[verdict] || verdict;
+    verdictLabels[verdict] || "UNRECOGNIZED VERDICT";
     
         summaryText.textContent = summary;
         reasoningText.textContent = reasoning;
