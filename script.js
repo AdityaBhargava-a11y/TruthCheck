@@ -205,4 +205,9 @@ sourceItem.appendChild(analysisStatus);
         verifyButton.innerHTML = 'Verify Claim <span>→</span>';
     }
 });
-
+claimInput.addEventListener("keydown", (event) => {
+    if (event.ctrlKey && event.key === "Enter") {
+        event.preventDefault();
+        verifyButton.click();
+    }
+});
