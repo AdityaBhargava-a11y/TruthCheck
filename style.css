@@ -656,6 +656,7 @@ footer > span {
     align-items: center;
     gap: 10px;
     margin: 16px 0 20px;
+    animation: examplesFadeIn 0.6s ease both;
 }
 
 .example-label {
@@ -674,16 +675,44 @@ footer > span {
     color: #d6d6e0;
     font-size: 12px;
     cursor: pointer;
-    transition: 0.2s ease;
+    transition: transform 0.2s ease, background 0.2s ease,
+                border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .example-chip:hover {
+    transform: translateY(-3px);
     border-color: #8b5cf6;
     background: #2b2440;
     color: #fff;
+    box-shadow: 0 5px 18px rgba(139, 92, 246, 0.2);
+}
+
+.example-chip:active {
+    transform: translateY(0) scale(0.96);
 }
 
 .example-chip:focus-visible {
     outline: 2px solid #8b5cf6;
     outline-offset: 3px;
+}
+
+@keyframes examplesFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .example-searches {
+        animation: none;
+    }
+
+    .example-chip {
+        transition: none;
+    }
 }
