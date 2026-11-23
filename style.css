@@ -228,7 +228,7 @@ body {
 /* FEATURES */
 
 .features {
-    padding: 90px 8%;
+    padding: 70px 8% 35px;
     background: #0b1220;
     border-top: 1px solid rgba(255,255,255,0.05);
 }
@@ -826,7 +826,7 @@ body {
 /* HOW IT WORKS */
 
 .how {
-    padding: 90px 8%;
+    padding: 35px 8% 90px;
     background: #0b1220;
     border-top: 1px solid rgba(255,255,255,0.05);
 }
