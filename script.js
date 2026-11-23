@@ -59,7 +59,7 @@ verifyButton.addEventListener("click", async () => {
                 : "Not provided.";
         }
 
-        const verdict = extractSection("VERDICT", "SUMMARY");
+        const verdict = extractSection("VERDICT", "CONFIDENCE");
         const summary = extractSection("SUMMARY", "REASONING");
         const reasoning = extractSection("REASONING", "LIMITATIONS");
         const limitations = extractSection("LIMITATIONS", "END");
