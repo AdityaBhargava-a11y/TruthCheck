@@ -113,9 +113,11 @@ const highCredibility = [
     "unesco.org",
     "britannica.com",
     "who.int",
+    "history.com",
+    "wtamu.edu",
+    "scientificamerican.com",
     "gov.in",
-    "gov",
-    "edu"
+    "gov"
 ];
 
 const lowCredibility = [
@@ -123,7 +125,10 @@ const lowCredibility = [
     "instagram.com",
     "x.com",
     "twitter.com",
-    "reddit.com"
+    "reddit.com",
+    "news.ycombinator.com",
+    "youtube.com",
+    "wikipedia.org"
 ];
 
 if (highCredibility.some(domain =>
