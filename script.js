@@ -3,7 +3,6 @@ const verifyButton = document.getElementById("verifyButton");
 
 const resultBox = document.getElementById("resultBox");
 const verdictBadge = document.getElementById("verdictBadge");
-const confidenceBadge = document.getElementById("confidenceBadge");
 const summaryText = document.getElementById("summaryText");
 const reasoningText = document.getElementById("reasoningText");
 const limitationsText = document.getElementById("limitationsText");
@@ -60,16 +59,13 @@ verifyButton.addEventListener("click", async () => {
                 : "Not provided.";
         }
 
-        const verdict = extractSection("VERDICT", "CONFIDENCE");
-const confidence = extractSection("CONFIDENCE", "SUMMARY");
+        const verdict = extractSection("VERDICT", "SUMMARY");
         const summary = extractSection("SUMMARY", "REASONING");
         const reasoning = extractSection("REASONING", "LIMITATIONS");
         const limitations = extractSection("LIMITATIONS", "END");
 
         verdictBadge.textContent = verdict;
-        confidenceBadge.textContent = confidence;
-confidenceBadge.className =
-    "confidence-badge " + confidence.toLowerCase();
+    
         summaryText.textContent = summary;
         reasoningText.textContent = reasoning;
         limitationsText.textContent = limitations;
