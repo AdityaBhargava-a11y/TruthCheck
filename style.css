@@ -650,3 +650,40 @@ footer > span {
     color: #fca5a5;
     background: #451f28;
 }
+.example-searches {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: 16px 0 20px;
+}
+
+.example-label {
+    width: 100%;
+    color: #888;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.example-chip {
+    padding: 9px 13px;
+    border: 1px solid #34343f;
+    border-radius: 20px;
+    background: #20202a;
+    color: #d6d6e0;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.example-chip:hover {
+    border-color: #8b5cf6;
+    background: #2b2440;
+    color: #fff;
+}
+
+.example-chip:focus-visible {
+    outline: 2px solid #8b5cf6;
+    outline-offset: 3px;
+}
