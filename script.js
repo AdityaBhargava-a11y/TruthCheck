@@ -64,7 +64,16 @@ verifyButton.addEventListener("click", async () => {
         const reasoning = extractSection("REASONING", "LIMITATIONS");
         const limitations = extractSection("LIMITATIONS", "END");
 
-        verdictBadge.textContent = verdict;
+        const verdictLabels = {
+    "Supported": "TRUE",
+    "Mostly supported": "MOSTLY TRUE",
+    "Misleading": "MISLEADING",
+    "Contradicted": "FALSE",
+    "Insufficient evidence": "UNVERIFIED"
+};
+
+verdictBadge.textContent =
+    verdictLabels[verdict] || verdict;
     
         summaryText.textContent = summary;
         reasoningText.textContent = reasoning;
